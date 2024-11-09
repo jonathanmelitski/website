@@ -12,7 +12,7 @@ function MyCommits() {
         })
         .then(async (response) => {
             const uniquePromises = Array.from(new Set(response.data.filter((el) => {
-                return el.type == "PushEvent"
+                return el.type === "PushEvent"
             }).map((el) => {
                 return el.payload.repository_id
              }))).map(async (el) => {
@@ -34,7 +34,7 @@ function MyCommits() {
 
 
     return (
-        repos.length != 0 ?
+        repos.length !== 0 ?
             <div className='grid grid-row-2 align-items-center text-white font-mono text-center px-2'>
                 Recent Activity
                 <ul className='border-white border-2 rounded-lg text-left px-2 divide-y-2'>

@@ -1,17 +1,15 @@
 function MainLayout({children}) {
     return (
-        <div>
-            <div className="flex-col">
+        <div className="grid grid-cols-1">
+            <div>
+                {children[0]}
+            </div>
+            <div className="flex">
                 <div>
-                    {children[0]}
+                    {children[1]}
                 </div>
-                <div className="flex">
-                    <div>
-                        {children[1]}
-                    </div>
-                    <div className="">
-                        {children[2]}
-                    </div>
+                <div className="">
+                    {children[2]}
                 </div>
             </div>
         </div>
@@ -19,3 +17,4 @@ function MainLayout({children}) {
 }
 
 export default MainLayout;
+

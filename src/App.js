@@ -1,6 +1,7 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
 import MainLayout from './layouts/MainLayout';
+import Header from './components/Header';
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -9,11 +10,13 @@ function App() {
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor'
 
   return (
-    <div className="bg-gradient-to-br from-cyan-500  to-purple-800">
+    <div className="bg-gradient-to-br from-cyan-500 to-purple-800">
       <MainLayout>
-        <div></div>
+        <div className="drop-shadow-md">
+          <Header/>
+        </div>
         <Sidebar/>
-        <div className="flex-col align-start p-4 min-h-screen font-mono text-white">
+        <div className="flex-col align-start p-4 font-mono text-white">
           <div className="text-6xl font-bold justify-self-start">
               <TypeAnimation className={CURSOR_CLASS_NAME}
                 cursor={false}
@@ -45,7 +48,6 @@ function App() {
             I'm a sophomore at the University of Pennsylvania.
           </div>
         </div>
-
       </MainLayout>
     </div>
   );

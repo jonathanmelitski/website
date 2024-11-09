@@ -7,7 +7,6 @@ function Sidebar() {
         <div className="min-w-52
         max-w-96
         bg-black/70
-        h-screen
         grid grid-cols-1">
             <div className="p-8">
                 <img src={headshot} alt="headshot"
