@@ -13,6 +13,9 @@
 # production
 /build
 
+
+/.obsidian
+
 # misc
 .DS_Store
 .env.local
